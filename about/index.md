@@ -3,4 +3,6 @@ layout: page
 title: About
 ---
 
-Nothing yet :(
+程序员一枚
+爱好打篮球、台球、dota
+
