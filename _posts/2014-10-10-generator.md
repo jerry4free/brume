@@ -60,14 +60,17 @@ title: python--生成器、迭代器
 		'__subclasshook__', 'close', 'gi_code', 'gi_frame', 
 		'gi_running', 'next', 'send', 'throw']
 这个对象带有__iter__()和next()方法，所以它是一个迭代器。
-
-还有一些高级的，如send(),throw(),close()
+还有一些其他的方法，如send(),throw(),close()
 
 ###3.生成器和迭代器的关系：
 
 迭代器不是生成器；但是生成器可以实现迭代协议，在一定程度上可以看做是迭代器。
 
+###4.生成器的作用:
 
+1. 快速产生迭代器
+2. 实现with语句的上下文管理器协议, 利用的是调用生成器函数时函数体并不执行，第一次调用next()方法才执行，并执行到yield后中止，，直到下一次调用next()方法才执行 
+3. 实现协程，利用的是send(),throw(),close()等特性
 
 
 
