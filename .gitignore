@@ -7,4 +7,4 @@ node_modules
 .sass-cache
 .ruby-version
 _posts/2014-03-07-demo-post.md
-deploy.sh
+fabfile.py
