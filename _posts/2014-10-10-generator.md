@@ -5,7 +5,8 @@ title: python--生成器、迭代器
 
 ###1.迭代器：遵循迭代协议的对象
 
-基本上迭代器是含有.next()方法的对象。而用户自定义的类，实现next()方法并__iter__()返回self，则是一个迭代器。如下：
+迭代器是含有.next()方法的对象。调用next()时，返回序列中的下一个项目，当无项目可返回时，raise StopIteration异常.
+用户自定义的类，实现next()方法并__iter__()返回self，就是一个迭代器。如下：
 
 		class Reverse:
 		    """Iterator for looping over a sequence backwards."""
@@ -59,8 +60,9 @@ title: python--生成器、迭代器
 		'__repr__', '__setattr__', '__sizeof__', '__str__', 
 		'__subclasshook__', 'close', 'gi_code', 'gi_frame', 
 		'gi_running', 'next', 'send', 'throw']
-这个对象带有__iter__()和next()方法，所以它是一个迭代器。
-还有一些其他的方法，如send(),throw(),close()
+
+除了有yield的函数以外，产生生成器的另一种方法是通过列表推导的方式，只不过将其放到括号中。如(i for i in num)
+这个对象带有__iter__()和next()方法，所以它同时也是一个迭代器。
 
 ###3.生成器和迭代器的关系：
 
