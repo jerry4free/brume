@@ -8,3 +8,4 @@ node_modules
 .ruby-version
 _posts/2014-03-07-demo-post.md
 fabfile.py
+*.pyc
